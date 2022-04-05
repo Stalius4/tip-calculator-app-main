@@ -7,38 +7,40 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+<body><img id="logo" src="./images/logo.svg" alt="" >
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<div id="main-card">
+  <div id="bill">Bill</div>
+  <input type="text" id="bill-amount"  name="fname"></input>
+  <img id="dollar" src="./images/icon-dollar.svg" alt="" >
+  <div id="tip-title">Select Tip %</div>
+  <div id="select-tips">
+    <button class="tip" id="tip-5">5%</button>
+    <button class="tip" id="tip-10">10%</button>
+    <button class="tip" id="tip-15">15%</button>
+    <button class="tip" id="tip-25">25%</button>
+    <button class="tip" id="tip-50">50%</button>
+    <button class="tip-custom" id="custom">Custom</button>
+</div>
+ <div id="number-of-ppl"> Number of People</div>
+ <input type="text" id="bill-amount"  name="fname"></input>
+ <img id="dollar" src="./images/icon-person.svg" alt="" >
+  <div id="total-card">
+    <div class="content1">
+      <h3>Tip Amount</h3>
+  <p>/ person</p>
+</div>
+  <div class="content2" id="tip-amount">$4.27</div>
+  <div class="content3">
+    <h3>Total</h3>
+<p>/ person</p></div>
+<div class="content4" id="total">$32.79</div>
+
+<button class="content5" id="reset">RESET</button>
+  
+</div>
+</div>
 </body>
 </html>
