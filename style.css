@@ -32,7 +32,7 @@ body{
 }
 #main-card{
     background-color: var(--White);
-    height: 100vh;
+    height: 100%;
     border-radius: 25px 25px 0px 0px;
     padding: 30px;
     max-width: 375px;
@@ -47,7 +47,7 @@ body{
 
 }
 
-#bill-amount{
+#bill-amount, #numb-of-people{
     background-color: var(--Very-light-grayish-cyan);
     font-size: 24px;
     border: none;
