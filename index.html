@@ -12,12 +12,16 @@
 <body><img id="logo" src="./images/logo.svg" alt="" >
   
 <div id="main-card">
+  <div class="top-line">
   <div id="bill">Bill</div>
-  <input type="number" id="bill-amount"  placeholder="0"></input>
+  <div id="zero">Can't be zero</div>
+</div>
+
+  <input type="number" id="bill-amount"  placeholder="0" ></input>
   <img id="dollar" src="./images/icon-dollar.svg" alt="" >
   <div id="tip-title">Select Tip %</div>
   <div id="select-tips">
-    <button class="tip" id="tip-5" value="5%" onclick="myFunction(5)">5%</button>
+    <button class="tip" id="tip-5" value="0" onclick="myFunction(5)">5%</button>
     <button class="tip" id="tip-10" onclick="myFunction(10)">10%</button>
     <button class="tip" id="tip-15" onclick="myFunction(15)">15%</button>
     <button class="tip" id="tip-25" onclick="myFunction(25)">25%</button>
@@ -27,18 +31,18 @@
   <div id="number-of-ppl"> 
    Number of People
   </div>
- <input type="number" id="numb-of-people" value="1" ></input>
+ <input type="number" id="numb-of-people" value="2" placeholder="0"></input>
  <img id="dollar" src="./images/icon-person.svg" alt="" >
   <div id="total-card">
     <div class="content1">
       <h3>Tip Amount</h3>
   <p>/ person</p>
  </div>
-  <div class="content2" id="tip-amount">$<span id="total-tip-per-person"></span></div>
+  <div class="content2" id="tip-amount">$<span id="total-tip-per-person">0.00</span></div>
   <div class="content3">
     <h3>Total</h3>
  <p>/ person</p></div>
- <div class="content4" id="total">$<span id="total-per-person"></span></div>
+ <div class="content4" id="total">$<span id="total-per-person">0.00</span></div>
 
  <button class="content5" id="reset" onclick="reset()">RESET</button>
  </div>
