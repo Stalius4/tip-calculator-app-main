@@ -76,7 +76,7 @@ body{
 
 }
 
-#bill-amount, #numb-of-people{
+#bill-amount, #numb-of-people {
     background-color: var(--Very-light-grayish-cyan);
     font-size: 24px;
     border: var(--Very-light-grayish-cyan) solid 2px;
@@ -87,7 +87,19 @@ body{
     padding-right: 10px;
     cursor: pointer;
 }
-#bill-amount:focus, #numb-of-people:focus{
+.custom-number{
+    background-color: var(--Very-light-grayish-cyan);
+    border: var(--Very-light-grayish-cyan) solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: right;
+    color:var(--Very-dark-cyan);
+    position: static;
+    font-size: 24px;
+    max-width: 149.7px;
+    padding-right: 6px;
+}
+#bill-amount:focus, #numb-of-people:focus, .custom-number:focus {
     border: var(--Strong-cyan) solid 2px;
     outline: none;
 }
@@ -131,6 +143,7 @@ body{
 #custom{
     grid-area: content6;
 }
+
 .tip{
     background-color: var(--Very-dark-cyan);
     border-radius: 5px;

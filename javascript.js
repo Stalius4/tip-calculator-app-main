@@ -5,7 +5,7 @@ const numberOfPeople = document.querySelector("#numb-of-people");
 const zero = document.querySelector("#zero-top")
 const zeroNumOfPeople = document.querySelector("#zero-mid")
 const inputs = document.querySelectorAll(".input")
-
+let customBtn = document.querySelector("#custom")
 
 
 
@@ -61,3 +61,10 @@ function myFunction(percentage) {
   zeroNumOfPeople.style.display = "none";
   }
 
+
+  function customButton(){
+    customBtn = customBtn.remove()
+    let customInput = document.querySelector("#select-tips")
+    customInput.insertAdjacentHTML("beforeend", ` <input type="number" placeholder="0" class="custom-number" id="custom"></input>`); 
+    
+  }
