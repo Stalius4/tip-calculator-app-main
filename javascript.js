@@ -7,7 +7,6 @@ const zeroNumOfPeople = document.querySelector("#zero-mid")
 const inputs = document.querySelectorAll(".input")
 let customBtn = document.querySelector("#custom")
 let customInput = document.querySelector("#custom1")
-console.log(customInput)
 
 
 
@@ -21,12 +20,20 @@ billAmount.addEventListener("input",() => {
     }else{
         billAmount.style.border = "hsl(186, 14%, 43%) solid 2px";
         zero.style.display = "none";
+        const customNumber = document.querySelector("#custom1")
+        let customNum = customNumber.value
+        var x = parseInt(billAmount.value) ; 
+        let people = parseInt(numberOfPeople.value);
+        let tipAmount = x *customNum / 100;
+        let totalAmount = x + tipAmount
+        totalTipPerPerson.innerHTML = Math.round(x *customNum / 100 / people).toFixed(2);
+        totaAmountPerPerson.innerHTML =Math.round(totalAmount / people).toFixed(2);
     }})
 
 
 
 // Checking if number of people input is not NaN or 0 if yes, shows message with error    
-numberOfPeople.addEventListener("input",() => {  
+numberOfPeople.addEventListener("input",() => { 
     if(isNaN(numberOfPeople.value)|| numberOfPeople.value == 0 ){
          numberOfPeople.style.border = "orangered solid 2px";
          zeroNumOfPeople.style.display = "flex";
@@ -35,8 +42,18 @@ numberOfPeople.addEventListener("input",() => {
     }else{
         numberOfPeople.style.border = "hsl(186, 14%, 43%) solid 2px";
         zeroNumOfPeople.style.display = "none";
+        const customNumber = document.querySelector("#custom1")
+        let customNum = customNumber.value
+        var x = parseInt(billAmount.value) ; 
+        let people = parseInt(numberOfPeople.value);
+        let tipAmount = x *customNum / 100;
+        let totalAmount = x + tipAmount
+        totalTipPerPerson.innerHTML = Math.round(x *customNum / 100 / people).toFixed(2);
+        totaAmountPerPerson.innerHTML =Math.round(totalAmount / people).toFixed(2);
      }})
  
+
+
 // On click functio to calculate tips 
 function myFunction(percentage) {
     var x = parseInt(billAmount.value) ; 
@@ -80,20 +97,4 @@ function myFunction(percentage) {
     customInput.insertAdjacentHTML("beforeend", ` <input type="number" placeholder="0" class="custom-number" id="custom1" oninput="myFunction1()"></input>`); 
     
   }
-
-  
-
-// customInput.addEventListener("input",() => {  
-//     let customInput = customInput.value;
-//     console.log("sds")
-//     var x = parseInt(billAmount.value) ; 
-//     let people = parseInt(numberOfPeople.value);
-//     let tipAmount = x *customInput / 100;
-//     let totalAmount = x + tipAmount
-//     totalTipPerPerson.innerHTML = Math.round(x *customInput / 100 / people).toFixed(2);
-//     totaAmountPerPerson.innerHTML =Math.round(totalAmount / people).toFixed(2);
-//     if(isNaN(billAmount.value)|| billAmount.value == 0 || numberOfPeople.value == 0){
-//         totaAmountPerPerson.innerHTML = "0.00";
-//         totalTipPerPerson.innerHTML = "0.00";
-//     }})
 
