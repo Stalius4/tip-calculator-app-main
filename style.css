@@ -135,7 +135,7 @@ body{
     background-color: var(--Very-dark-cyan);
     border-radius: 5px;
     text-align: center;
-
+    cursor: pointer;
     color:var(--White);
     font-size: 23px;
     border: none;
@@ -147,6 +147,7 @@ body{
     color: var(--Dark-grayish-cyan);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 .tip:focus, .tip-custom:focus{
     background-color: var(--Strong-cyan);

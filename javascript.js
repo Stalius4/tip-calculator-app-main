@@ -3,7 +3,7 @@ const totaAmountPerPerson = document.querySelector("#total-per-person");
 const totalTipPerPerson = document.querySelector("#total-tip-per-person");
 const numberOfPeople = document.querySelector("#numb-of-people");
 const zero = document.querySelector("#zero-top")
-const zeroMid = document.querySelector("#zero-mid")
+const zeroNumOfPeople = document.querySelector("#zero-mid")
 const inputs = document.querySelectorAll(".input")
 
 
@@ -28,12 +28,12 @@ billAmount.addEventListener("input",() => {
 numberOfPeople.addEventListener("input",() => {  
     if(isNaN(numberOfPeople.value)|| numberOfPeople.value == 0 ){
          numberOfPeople.style.border = "orangered solid 2px";
-         zeroMid.style.display = "flex";
+         zeroNumOfPeople.style.display = "flex";
         totaAmountPerPerson.innerHTML = "0.00";
         totalTipPerPerson.innerHTML = "0.00";
     }else{
         numberOfPeople.style.border = "hsl(186, 14%, 43%) solid 2px";
-        zeroMid.style.display = "none";
+        zeroNumOfPeople.style.display = "none";
      }})
 
 // On click functio to calculate tips 
@@ -42,9 +42,9 @@ function myFunction(percentage) {
     let people = parseInt(numberOfPeople.value);
     let tipAmount = x *percentage / 100;
     let totalAmount = x + tipAmount
-    totalTipPerPerson.innerHTML = Math.round(x *percentage / 100 / people);
-    totaAmountPerPerson.innerHTML =Math.round(totalAmount / people);
-    if(isNaN(billAmount.value)|| billAmount.value == 0 ){
+    totalTipPerPerson.innerHTML = Math.round(x *percentage / 100 / people).toFixed(2);
+    totaAmountPerPerson.innerHTML =Math.round(totalAmount / people).toFixed(2);
+    if(isNaN(billAmount.value)|| billAmount.value == 0 || numberOfPeople.value == 0){
         totaAmountPerPerson.innerHTML = "0.00";
         totalTipPerPerson.innerHTML = "0.00";
     }
@@ -58,6 +58,6 @@ function myFunction(percentage) {
   billAmount.style.border = "hsl(186, 14%, 43%) solid 2px";
   zero.style.display = "none";
   numberOfPeople.style.border = "hsl(186, 14%, 43%) solid 2px";
-  zeroMid.style.display = "none";
+  zeroNumOfPeople.style.display = "none";
   }
 
