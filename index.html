@@ -12,6 +12,7 @@
 <body><img id="logo" src="./images/logo.svg" alt="" >
   
 <div id="main-card">
+  <div id="top-lines">
   <div class="top-line">
      <div id="bill">Bill</div>
      <div id="zero-top">Can't be zero</div>
@@ -19,6 +20,8 @@
 
   <input class="input" type="number" id="bill-amount"  oninput="" placeholder="0" ></input>
   <img id="dollar" src="./images/icon-dollar.svg" alt="dollar" >
+</div>
+<div id="select-tip">
   <div id="tip-title">Select Tip %</div>
   <div id="select-tips">
     <button class="tip" id="tip-5" value="0" onclick="myFunction(5)">5%</button>
@@ -29,13 +32,15 @@
     <button class="tip-custom" id="custom" onclick="customButton()">Custom</button>
    
  </div>
- 
+</div>
+ <div class="mid-lines">
  <div class="mid-line">
   <div id="number-of-ppl">Number of People</div>
   <div id="zero-mid">Can't be zero</div>
   </div>
  <input  class="input" type="number" id="numb-of-people"  placeholder="0"></input>
- <img id="dollar" src="./images/icon-person.svg" alt="icon" >
+ <img id="people" src="./images/icon-person.svg" alt="icon" >
+</div>
   <div id="total-card">
     <div class="content1">
       <h3>Tip Amount</h3>

@@ -103,7 +103,7 @@ body{
     border: var(--Strong-cyan) solid 2px;
     outline: none;
 }
-#dollar{
+#dollar, #people{
     position: relative;
     bottom:2.5rem;
     left: 1.6rem;
@@ -232,11 +232,11 @@ p{
 #reset:hover{
     background-color: var(--Light-grayish-cyan);
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1440px) {
     #main-card{
         background-color: var(--White);
         border-radius: 25px 25px 0px 0px;
-        padding: 30px;
+        padding: 20px 45px 45px 45px;
         max-width: 915px;
         min-width: 375px;
         max-height: 475px;
@@ -247,4 +247,73 @@ p{
         margin-right: auto;
         padding: 170px 0px 90px 0px;
   }
+  #dollar{
+    position: relative;
+    top: 0px;
+    left:-370px;
+  }
+    #bill-amount{
+    width: 380px;
+    }
+    #main-card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "content1 content4"
+    "content2 content4"
+    "content3 content4 ";
+    grid-gap: 2.3rem;
+    border-radius: 25px 25px 25px 25px ;
+    }
+    #total-card{
+        grid-area: content4;
+    }
+    #select-tip{
+        grid-area: content2;
+    }
+    #top-lines{
+        grid-area: content1;
+    }
+    #mid-lines{
+        grid-area: content3;
+    }
+    #select-tips{
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 48px 48px ;
+      grid-template-areas:
+        "content1 content2 content3"
+        "content4 content5 content6";
+      grid-gap: 1rem;
+      padding-right: 15px;
+    }
+
+    #numb-of-people{
+        width: 380px;
+    }
+    #total-card{
+        padding-bottom: 60px;
+        
+}
+#total-card{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    margin: 10px -7px 0px -7px;
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 52px 1fr 48px;
+  grid-template-areas:
+    "content1 content2"
+    "content3 content4"
+    "content5 content5 ";
+  padding: 2.8rem 3.5rem 3.5rem 3.5rem ;
+}
+span, #tip-amount, #total{
+    font-size: 45px;
+}
+.content1, .content3{
+position: relative;
+top:15px
+}
 }
