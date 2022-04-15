@@ -17,7 +17,18 @@ billAmount.addEventListener("input",() => {
         zero.style.display = "flex";
         totaAmountPerPerson.innerHTML = "0.00";
         totalTipPerPerson.innerHTML = "0.00";
-    }else{
+    }else if ( billAmount > 0 && numberOfPeople == 0){
+        totaAmountPerPerson.innerHTML = "0.00";
+        totalTipPerPerson.innerHTML = "0.00";
+    }else if ( billAmount > 0 && customInput.value == 0){
+        totaAmountPerPerson.innerHTML = "0.00";
+        totalTipPerPerson.innerHTML = "0.00";
+    }    else if(isNaN(totalTipPerPerson.value) || totalTipPerPerson == 0){
+        totalTipPerPerson.innerHTML = "0.00";
+        totaAmountPerPerson.innerHTML = "0.00";}
+    
+    
+    else {
         billAmount.style.border = "hsl(186, 14%, 43%) solid 2px";
         zero.style.display = "none";
         const customNumber = document.querySelector("#custom1")
@@ -39,7 +50,12 @@ numberOfPeople.addEventListener("input",() => {
          zeroNumOfPeople.style.display = "flex";
         totaAmountPerPerson.innerHTML = "0.00";
         totalTipPerPerson.innerHTML = "0.00";
-    }else{
+        
+    }else if(isNaN(totalTipPerPerson.value) || totalTipPerPerson == 0){
+        totalTipPerPerson.innerHTML = "0.00";
+        totaAmountPerPerson.innerHTML = "0.00";}
+    
+    else{
         numberOfPeople.style.border = "hsl(186, 14%, 43%) solid 2px";
         zeroNumOfPeople.style.display = "none";
         const customNumber = document.querySelector("#custom1")
@@ -54,7 +70,7 @@ numberOfPeople.addEventListener("input",() => {
  
 
 
-// On click functio to calculate tips 
+// On click function to calculate tips 
 function myFunction(percentage) {
     var x = parseInt(billAmount.value) ; 
     let people = parseInt(numberOfPeople.value);
@@ -65,6 +81,10 @@ function myFunction(percentage) {
     if(isNaN(billAmount.value)|| billAmount.value == 0 || numberOfPeople.value == 0){
         totaAmountPerPerson.innerHTML = "0.00";
         totalTipPerPerson.innerHTML = "0.00";
+    }else{
+    totaAmountPerPerson.innerHTML = "0.00";
+    totalTipPerPerson.innerHTML = "0.00";
+
     }
   }
 
@@ -77,6 +97,9 @@ function myFunction(percentage) {
     let totalAmount = x + tipAmount
     totalTipPerPerson.innerHTML = Math.round(x *customNum / 100 / people).toFixed(2);
     totaAmountPerPerson.innerHTML =Math.round(totalAmount / people).toFixed(2);
+    if(isNaN(totalTipPerPerson.value) || totalTipPerPerson == 0){
+        totalTipPerPerson.innerHTML = "0.00";
+        totaAmountPerPerson.innerHTML = "0.00";}
   }
 
   function reset(){
@@ -88,6 +111,8 @@ function myFunction(percentage) {
   zero.style.display = "none";
   numberOfPeople.style.border = "hsl(186, 14%, 43%) solid 2px";
   zeroNumOfPeople.style.display = "none";
+  customInput.style.p
+  
   }
 
 
@@ -97,4 +122,3 @@ function myFunction(percentage) {
     customInput.insertAdjacentHTML("beforeend", ` <input type="number" placeholder="0" class="custom-number" id="custom1" oninput="myFunction1()"></input>`); 
     
   }
-

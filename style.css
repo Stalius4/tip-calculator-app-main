@@ -316,4 +316,7 @@ span, #tip-amount, #total{
 position: relative;
 top:15px
 }
+.custom-number{
+    max-width:  119.91px;
+}
 }
