@@ -94,10 +94,11 @@ body{
     cursor: pointer;
     text-align: right;
     color:var(--Very-dark-cyan);
-    position: static;
+    grid-area: content6;
     font-size: 24px;
     max-width: 149.7px;
     padding-right: 6px;
+    display:none;
 }
 #bill-amount:focus, #numb-of-people:focus, .custom-number:focus {
     border: var(--Strong-cyan) solid 2px;
@@ -161,6 +162,7 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding-top: 0.rem;
 }
 .tip:focus, .tip-custom:focus{
     background-color: var(--Strong-cyan);
@@ -185,7 +187,7 @@ body{
     "content3 content4"
     "content5 content5 ";
   grid-gap: 2rem;
-  padding: 3rem 2rem 2rem 2rem ;
+  padding: 3rem 2rem 1rem 2rem ;
 }
 h3{
     color: var(--White);
@@ -307,7 +309,7 @@ p{
     "content1 content2"
     "content3 content4"
     "content5 content5 ";
-  padding: 2.8rem 3.5rem 3.5rem 3.5rem ;
+  padding: 2.8rem 3.5rem 1.8rem 3.5rem ;
 }
 span, #tip-amount, #total{
     font-size: 45px;
